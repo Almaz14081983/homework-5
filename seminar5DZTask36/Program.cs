@@ -42,12 +42,12 @@ void PrintArray(int[] someArray)
 int[] SumOfOdd(int[]someArray)
 {         
     int oddPosition = 0;  
-    int count = 1;
+    //int count = 1;
     for(int i = 0; i<= someArray.Length-1; i=i+1) 
     { 
         if(i%2!=0) oddPosition = oddPosition + someArray[i]; 
     }    
-    count = count + 1;
+    //count = count + 1;
     Console.WriteLine($"сумма элементов, стоящих на нечётных позициях: {oddPosition}");
     return someArray;           
 }

@@ -10,9 +10,7 @@ int InputNumber(string message)
     int res = int.Parse(Console.ReadLine()!);
     return res;
 }
-int size = InputNumber("Введите размер массива");
 
-int[] array = GetArray(size);
 
 int[] GetArray(int size)
 {
@@ -23,7 +21,7 @@ int[] GetArray(int size)
     }
     return res;    
 }
-array = GetArray(size);
+
 
 void PrintArray(int[] someArray)
 {
@@ -37,7 +35,7 @@ void PrintArray(int[] someArray)
 
 int[] NumberEven(int[]someArray)
 {
-    int count = 0;
+    //int count = 0;
     int numberOfEven = 0;
     int numberOfOdd = 0;
     for(int i = 0; i<= someArray.Length-1; i++) 
@@ -45,12 +43,15 @@ int[] NumberEven(int[]someArray)
         if (someArray[i]%2==0) numberOfEven = numberOfEven +1 ;   
         if (someArray[i]%2!=0) numberOfOdd = numberOfOdd +1 ;     
     }
-    count = count + 1;
+    //count = count + 1;
     Console.WriteLine($"из них количество четных чисел: {numberOfEven},");
     Console.WriteLine($"а количество нечетных чисел: {numberOfOdd}.");
     return someArray;          
 }
 
+int size = InputNumber("Введите размер массива");
+int[] array = GetArray(size);
+array = GetArray(size);
 PrintArray(array);
 array = NumberEven(array);
 

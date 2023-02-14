@@ -5,18 +5,12 @@
 
 Console.Clear();
 
-
 int InputNumber(string message)
 {
     Console.Write($"{message}: ");
     int res = int.Parse(Console.ReadLine()!);
     return res;
 }
-
-int size = InputNumber("Введите размер массива");
-int min = InputNumber("Введите минимальное значение в массиве");
-int max = InputNumber("Введите максимальное значение в массиве");
-int[] array = GetArray(size, min, max );
 
 int[] GetArray(int size, int min, int max)
 {
@@ -38,7 +32,6 @@ void PrintArray(int[] someArray)
   Console.WriteLine($"{someArray[someArray.Length - 1]}]");
 }
 
-
 int[] SumOfOdd(int[]someArray)
 {         
     int oddPosition = 0;  
@@ -52,6 +45,10 @@ int[] SumOfOdd(int[]someArray)
     return someArray;           
 }
 
+int size = InputNumber("Введите размер массива");
+int min = InputNumber("Введите минимальное значение в массиве");
+int max = InputNumber("Введите максимальное значение в массиве");
+int[] array = GetArray(size, min, max );
 array = GetArray(size, min, max );
 PrintArray(array);
 array = SumOfOdd(array);

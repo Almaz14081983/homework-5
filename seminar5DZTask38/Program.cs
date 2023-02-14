@@ -9,6 +9,13 @@ int min = InputNumber("Введите минимальное значение в
 int max = InputNumber("Введите максимальное значение в массиве");
 int[] array = GetArray(size, min, max );
 
+int InputNumber(string message)
+{
+    Console.Write($"{message}: ");
+    int res = int.Parse(Console.ReadLine()!);
+    return res;
+}
+
 int[] GetArray(int size, int min, int max)
 {
     int[] res = new int [size];
@@ -17,15 +24,6 @@ int[] GetArray(int size, int min, int max)
         res[i] = new Random().Next(min, max+1);
     }
     return res;    
-}
-
-array = GetArray(size, min, max );
-
-int InputNumber(string message)
-{
-    Console.Write($"{message}: ");
-    int res = int.Parse(Console.ReadLine()!);
-    return res;
 }
 
 void PrintArray(int[] someArray)
@@ -58,5 +56,6 @@ int[] ChangeSign(int[]someArray)
     return someArray;          
 }
 
+array = GetArray(size, min, max );
 PrintArray(array);
 array = ChangeSign(array);
